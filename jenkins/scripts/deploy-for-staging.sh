@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 echo 'The following "npm" command builds your Node.js/React application for'
-echo 'production in the local "build" directory (i.e. within the appropriate'
+echo 'staging in the local "build" directory (i.e. within the appropriate'
 echo 'subdirectory of "/var/jenkins_home/workspace/"), correctly bundles React'
 echo 'in production mode and optimizes the build for the best performance.'
 set -x
@@ -9,7 +9,7 @@ npm run build
 set +x
 
 echo 'The following "npm" command downloads and installs the npm serve module'
-echo '(for serving static sites in production environments) to the local'
+echo '(for serving static sites in staging environments) to the local'
 echo '"node_modules" directory (i.e. within the appropriate subdirectory of'
 echo '"/var/jenkins_home/workspace/"), which means that this module should not'
 echo 'need to be downloaded after this Pipeline''s initial run for a given'
@@ -19,7 +19,7 @@ npm install serve
 set +x
 
 echo 'The following "serve" command runs the npm serve module (downloaded'
-echo 'above) deploys your Node.js/React application (built above in production'
+echo 'above) deploys your Node.js/React application (built above in staging'
 echo 'mode) for production and makes the application available for web browsing.'
 echo 'The "serve" command has a trailing ampersand so that the command runs'
 echo 'as a background process (asynchronously). Otherwise, this command'
