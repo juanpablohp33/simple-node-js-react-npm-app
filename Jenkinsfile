@@ -34,7 +34,7 @@ pipeline {
             steps {
 		sh 'chmod +x ./jenkins/scripts/deliver-for-qa.sh'
                 sh 'chmod +x ./jenkins/scripts/kill.sh'
-                sh './jenkins/scripts/deploy-for-qa.sh'
+                sh './jenkins/scripts/deliver-for-qa.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh './jenkins/scripts/kill.sh'
             }
