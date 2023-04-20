@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 pipeline {
     agent any
     environment {
@@ -65,3 +66,6 @@ pipeline {
         }
     }
 }
+=======
+
+>>>>>>> master
